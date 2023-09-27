@@ -1,16 +1,18 @@
 import os
-import sys
-import urllib
 import urllib.request as request
 import zipfile
-from src.CarPrice.exception import CustomException
-from src.CarPrice.logger import logging
-import pandas as pd
-from src.CarPrice.utils.common import get_size
-from pathlib import Path
-from src.CarPrice.entity import DataIngestionConfig
+from CarPrice.logger import logging
+from CarPrice.utils.common import get_size
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
+from CarPrice.logger import logging
+from sklearn.model_selection import train_test_split
+import pandas as pd
+# import requests
+import urllib
+import sys
+
+
 
 
 
@@ -69,4 +71,6 @@ class DataIngestion:
         logging.info("Ingestion of the data is completed")
 
         return train_data_path, test_data_path
+
+
 
